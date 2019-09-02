@@ -1,4 +1,27 @@
+/* Setting a universal font size */
 html, body {
+font-size: 1 rem;
+}
+
+#inner {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar {
+
+}
+
+.nav-link {
+
+}
+
+#main-doc {
+
+}
+
+.main-section {
 
 }
 
@@ -15,4 +38,12 @@ code {
 
 .code-green {
   color: green;
+}
+
+.codebox {
+  background: #eee;
+  border: 2px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
 }
