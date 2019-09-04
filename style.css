@@ -6,19 +6,22 @@ font-size: 1 rem;
 #inner {
   padding: 50px;
   display: flex;
-  flex-direction: column;
 }
 
 #navbar {
-
+flex: 30%;
+padding: 20px;
 }
 
 .nav-link {
-
+border: solid 2px;
+border-color: black;
+padding: 20px;
 }
 
 #main-doc {
-
+flex: 70%;
+padding: 20px;
 }
 
 .main-section {
