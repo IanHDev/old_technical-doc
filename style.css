@@ -5,23 +5,35 @@ font-size: 1 rem;
 
 #inner {
   padding: 50px;
+  margin: 50px;
   display: flex;
+  border: 2px;
+  border-color: black;
+  border: solid;
 }
 
 #navbar {
 flex: 30%;
 padding: 20px;
+border: solid 2px;
+position: fixed;
 }
 
 .nav-link {
 border: solid 2px;
 border-color: black;
-padding: 20px;
+
+line-height: 2rem;
+}
+
+#nav-list {
+  padding: 20px 0px;
 }
 
 #main-doc {
 flex: 70%;
 padding: 20px;
+border: solid 2px;
 }
 
 .main-section {
