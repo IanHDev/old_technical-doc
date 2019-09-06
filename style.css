@@ -6,28 +6,38 @@ font-size: 1 rem;
 #inner {
   padding: 50px;
   margin: 50px;
-  display: flex;
   border: 2px;
   border-color: black;
   border: solid;
+  display: flex;
 }
 
 #navbar {
-flex: 30%;
-padding: 20px;
+
 border: solid 2px;
-position: fixed;
+min-width: 250px;
+height: 80%;  
+overflow-y: auto;
+overflow-x: hidden;
 }
-
-.nav-link {
-border: solid 2px;
-border-color: black;
-
-line-height: 2rem;
+#navbar header {
+  text-align: center;
 }
 
 #nav-list {
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  border-top: 1px solid;
+  list-style: none;
+  
+}
+.nav-link {
+  border-top: 1px solid;
   padding: 20px 0px;
+  width: 80%;
+  line-height: 2rem;
 }
 
 #main-doc {
