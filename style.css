@@ -5,20 +5,24 @@ font-size: 1 rem;
 
 #inner {
   padding: 50px;
-  margin: 50px;
+  
   border: 2px;
   border-color: black;
   border: solid;
-  display: flex;
+  display: inline-block;
+  
+}
+
+#fix-nav {
+
 }
 
 #navbar {
 
 border: solid 2px;
 min-width: 250px;
-height: 80%;  
-overflow-y: auto;
-overflow-x: hidden;
+height: 100%;  
+
 }
 #navbar header {
   text-align: center;
@@ -31,13 +35,24 @@ overflow-x: hidden;
   cursor: pointer;
   border-top: 1px solid;
   list-style: none;
-  
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .nav-link {
-  border-top: 1px solid;
   padding: 20px 0px;
-  width: 80%;
-  line-height: 2rem;
+  line-height: 2.25rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+
+}
+  a:hover {
+    text-decoration: underline;
+  }
+@media screen and (max-width: 500px) {
+  #inner {
+  flex-direction: column;
+  }
 }
 
 #main-doc {
@@ -71,4 +86,19 @@ code {
   border-radius: 5px;
   padding: 10px;
   margin: 0 auto;
+}
+
+#footer ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  #footer ul {
+    flex-direction: column;
+  }
+  #footer li {
+    justify-content: center;
+  }
 }
