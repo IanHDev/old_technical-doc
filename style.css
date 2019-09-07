@@ -9,7 +9,7 @@ font-size: 1 rem;
   border: 2px;
   border-color: black;
   border: solid;
-  display: inline-block;
+  
   
 }
 
@@ -18,12 +18,17 @@ font-size: 1 rem;
 }
 
 #navbar {
+  position: fixed;
 
-border: solid 2px;
+width: 300px;
+
+border-right: solid 2px;
 min-width: 250px;
-height: 100%;  
+
+
 
 }
+
 #navbar header {
   text-align: center;
 }
@@ -49,14 +54,16 @@ height: 100%;
   a:hover {
     text-decoration: underline;
   }
-@media screen and (max-width: 500px) {
+
+/* @media screen and (max-width: 500px) {
   #inner {
   flex-direction: column;
   }
-}
+} */
 
 #main-doc {
-flex: 70%;
+position: absolute;
+margin-left: 300px;
 padding: 20px;
 border: solid 2px;
 }
