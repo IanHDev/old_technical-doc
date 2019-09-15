@@ -1,18 +1,4 @@
-<!-- User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
-User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.
-User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.
-User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "Javascript and Java" should have a corresponding id="Javascript_and_Java").
-xUser Story #5: The .main-section elements should contain at least 10 p elements total (not each).
-xUser Story #6: The .main-section elements should contain at least 5 code elements total (not each).
-xUser Story #7: The .main-section elements should contain at least 5 li items total (not each).
-xUser Story #8: I can see a nav element with a corresponding id="navbar".
-xUser Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
-xUser Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
-xUser Story #11: The header element in the navbar must come before any link (a) elements in the navbar.
-xUser Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
-xUser Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.
-User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
-User Story #15: My Technical Documentation page should use at least one media query. -->
+
 
 <!-- Repository can be found at : https://github.com/IanHDev/technical-doc -->
 
@@ -31,256 +17,274 @@ User Story #15: My Technical Documentation page should use at least one media qu
 <body>
 
   <!-- Element with "navbar" is shown on left side on large screens, and is always visible to the user. "Navbar" will move to top on smaller screens. -->
-<div id="inner">
- 
-  <nav id="navbar">
-    <header>
-      <h1>Git and GitHub</h1>
-    </header>
-    <ul id="nav-list">
-      <li><a class="nav-link" href="#overview">Overview</a></li>
-      <li><a class="nav-link" href="#difference_between_git_and_github">Difference between Git and GitHub</a></li>
-      <li><a class="nav-link" href="#about_git">About Git</a></li>
-      <li><a class="nav-link" href="#three_sections_of_a_git_project">Three Sections of a Git Project</a></li>
-      <li><a class="nav-link" href="#install_git">Install Git</a></li>
-      <li><a class="nav-link" href="#configure_the_git_environment">Configure the Git Environment</a></li>
-      <li><a class="nav-link" href="#initialize_git_in_a_project">Initialize Git in a Project</a></li>
-      <li><a class="nav-link" href="#get_help_in_git">Get Help in Git</a></li>
-      <li><a class="nav-link" href="#sources">Sources</a></li>
-    </ul>
-  </nav>
-  
+  <div id="container">
 
-
-  <main id="main-doc">
-
-    <section class="main-section" id="overview">
+    <nav id="navbar">
       <header>
-        <h1>Overview</h1>
+        <h1>Git and GitHub</h1>
       </header>
-      <p>Git is an open source distributed version control system created in 2005 by Linus Torvalds and others from the
-        Linux development community. Git can work with many types of projects, but it’s most commonly used for software
-        source code.</p>
-      <p>Version control is a system that keeps track of changes to a file or group of files over time. When you have a
-        history of these changes, it lets you find specific versions later, compare changes between versions, recover
-        files you may have deleted, or revert files to previous versions.</p>
-      <p>A distributed version control system means that different users maintain their own repositories of a project,
-        instead of working from one central repository. Users automatically have full file tracking abilities and the
-        project’s complete version history without needing access to a central server or network.</p>
-      <p>When Git is initialized in a project directory, it begins tracking file changes and stores them as “change
-        sets” or “patches.” Users working together on a project submit their change sets which are then included (or
-        rejected) in the project.</p>
-    </section>
-
-    <section class="main-section" id="difference_between_git_and_github">
-      <header>
-        <h1>Difference between Git and GitHub</h1>
-      </header>
-      <p>Git and Github are two different things. Git is the version control system, while GitHub is a service for
-        hosting Git repos and help people collaborate on writing software. However, they are often confounded because of
-        their similar name, because of the fact that GitHub builds on top of Git, and because many websites and articles
-        don’t make the difference between them clear enough.</p>
-      <h2>Git</h2>
-      <p>Git is the distributed version control system. Git is responsible for keeping track of changes to content –
-        usually source code files.</p>
-      <h2>GitHub</h2>
-      <p>GitHub is a company that provides Git repository hosting. That means that they provide a turnkey solution to
-        host Git repositories on their servers. That can be useful to keep a backup of your repository (Git only tracks
-        the changes made to you files over time, the repo still needs to be backed up), and to have a centralized place
-        to keep and share your code with others.</p>
-
-      <p>More than just a Git repository hosting service, GitHub is a software forge. That means it also provides an
-        issue tracker, tools for code review, and other tools for collaborating with other people and creating software.
-      </p>
-
-      <p>GitHub isn’t the only one to provide this kind of service. One of its major competitors is GitLab.</p>
-    </section>
-
-    <section class="main-section" id="about_git">
-      <header>
-        <h1>About Git</h1>
-      </header>
-      <p>Git is an open source distributed version control system created in 2005 by Linus Torvalds and others from the
-        Linux development community. Git can work with many types of projects, but it’s most commonly used for software
-        source code.</p>
-
-      <p>Version control is a system that keeps track of changes to a file or group of files over time. When you have a
-        history of these changes, it lets you find specific versions later, compare changes between versions, recover
-        files you may have deleted, or revert files to previous versions.</p>
-
-      <p>A <em>distributed</em> version control system means that different users maintain their own repositories of a
-        project, instead of working from one central repository. Users automatically have full file tracking abilities
-        and the project’s complete version history without needing access to a central server or network.</p>
-
-      <p>When Git is initialized in a project directory, it begins tracking file changes and stores them as “change
-        sets” or “patches.” Users working together on a project submit their change sets which are then included (or
-        rejected) in the project.
-      </p>
-    </section>
-
-    <section class="main-section" id="three_sections_of_a_git_project">
-      <header>
-        <h1>Three Sections of a Git Project</h1>
-      </header>
-      <p>A git project will have the following three main sections:</p>
-      <ol>
-        <li>Git directory</li>
-        <li>Working directory (or working tree)</li>
-        <li>Staging area</li>
-      </ol>
-      <p>The <strong>Git directory</strong> (located in <code>YOUR-PROJECT-PATH/.git/</code>) is where Git stores
-        everything it needs to
-        accurately track the project. This includes metadata and an object database which includes compressed versions
-        of the project files.</p>
-
-      <p>The <strong>working directory</strong> is where a user makes local changes to a project. The working directory
-        pulls the
-        project’s files from the Git directory’s object database and places them on the user’s local machine.</p>
-
-      <p>The <strong>staging area</strong> is a file (also called the “index”, “stage”, or “cache”) that stores
-        information about what
-        will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a snapshot
-        of the files as they are and permanently stores that snapshot in the Git directory.</p>
-
-      <p>With three sections, there are three main states that a file can be in at any given time: committed, modified,
-        or staged. You modify a file any time you make changes to it in your working directory. Next, it’s staged when
-        you move it to the staging area. Finally, it’s <em>committed</em> after a commit.</p>
-    </section>
-
-    <section class="main-section" id="install_git">
-      <header>
-        <h1>Install Git</h1>
-      </header>
-      <ul>
-        <li>Ubuntu: <code>sudo apt-get install git</code></li>
-        <li>Windows: <a href="https://git-scm.com/download/win">Download</a></li>
-        <li>Mac: <a href="https://git-scm.com/download/mac">Download</a></li>
+      <ul id="nav-list">
+        <li><a class="nav-link" href="#overview">Overview</a></li>
+        <li><a class="nav-link" href="#difference_between_git_and_github">Difference between Git and GitHub</a></li>
+        <li><a class="nav-link" href="#about_git">About Git</a></li>
+        <li><a class="nav-link" href="#three_sections_of_a_git_project">Three Sections of a Git Project</a></li>
+        <li><a class="nav-link" href="#install_git">Install Git</a></li>
+        <li><a class="nav-link" href="#configure_the_git_environment">Configure the Git Environment</a></li>
+        <li><a class="nav-link" href="#initialize_git_in_a_project">Initialize Git in a Project</a></li>
+        <li><a class="nav-link" href="#get_help_in_git">Get Help in Git</a></li>
+        <li><a class="nav-link" href="#sources">Sources</a></li>
       </ul>
-    </section>
+      <footer id="footer">
+        <ul>
+          <li><strong>IanHDev</strong></li>
+          <li><a href="https://twitter.com/intent/tweet?screen_name=IanHDev&ref_src=twsrc%5Etfw"
+              class="twitter-mention-button" data-show-count="false">Tweet to @TwitterDev</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </li>
+          <li><a href="https://github.com/IanHDev" target="_blank">My GitHub</a></li>
+        </ul>
+      </footer>
+    </nav>
 
-    <section class="main-section" id="configure_the_git_environment">
-      <header>
-        <h1>Configure the Git Environment</h1>
-      </header>
-      <p>Git has a git config tool that allows you to customize your Git environment. You can change the way Git looks
-        and functions by setting certain configuration variables. Run these commands from a command line interface on
-        your machine (Terminal in Mac, Command Prompt or Powershell in Windows).</p>
 
-      <p>There are three levels of where these configuration variables are stored:</p>
 
-      <ol>
-        <li>System: located in /etc/gitconfig, applies default settings to every user of the computer. To make changes
-          to this file, use the --system option with the git config command.</li>
-        <li>User: located in ~/.gitconfig or ~/.config/git/config, applies settings to a single user. To make changes to
-          this file, use the --global option with the git config command.</li>
-        <li>Project: located in YOUR-PROJECT-PATH/.git/config, applies settings to the project only. To make changes to
-          this file, use the git config command.</li>
-      </ol>
+    <main id="main-doc">
 
-      <p>If there are settings that conflict with each other, the project-level configurations will override the
-        user-level ones, and the user-level configurations will override the system-level ones.</p>
+      <section class="main-section" id="overview">
+        <header>
+          <h1>Overview</h1>
+        </header>
+        <p>Git is an open source distributed version control system created in 2005 by Linus Torvalds and others from
+          the
+          Linux development community. Git can work with many types of projects, but it’s most commonly used for
+          software
+          source code.</p>
+        <p>Version control is a system that keeps track of changes to a file or group of files over time. When you have
+          a
+          history of these changes, it lets you find specific versions later, compare changes between versions, recover
+          files you may have deleted, or revert files to previous versions.</p>
+        <p>A distributed version control system means that different users maintain their own repositories of a project,
+          instead of working from one central repository. Users automatically have full file tracking abilities and the
+          project’s complete version history without needing access to a central server or network.</p>
+        <p>When Git is initialized in a project directory, it begins tracking file changes and stores them as “change
+          sets” or “patches.” Users working together on a project submit their change sets which are then included (or
+          rejected) in the project.</p>
+      </section>
 
-      <p>Note for Windows users: Git looks for the user-level configuration file (.gitconfig) in your $HOME directory
-        (C:\Users\$USER). Git also looks for /etc/gitconfig, although it’s relative to the MSys root, which is wherever
-        you decide to install Git on your Windows system when you run the installer. If you are using version 2.x or
-        later of Git for Windows, there is also a system-level config file at C:\Documents and Settings\All
-        Users\Application Data\Git\config on Windows XP, and in C:\ProgramData\Git\config on Windows Vista and newer.
-        This config file can only be changed by git config -f FILE as an admin.</p>
+      <section class="main-section" id="difference_between_git_and_github">
+        <header>
+          <h1>Difference between Git and GitHub</h1>
+        </header>
+        <p>Git and Github are two different things. Git is the version control system, while GitHub is a service for
+          hosting Git repos and help people collaborate on writing software. However, they are often confounded because
+          of
+          their similar name, because of the fact that GitHub builds on top of Git, and because many websites and
+          articles
+          don’t make the difference between them clear enough.</p>
+        <h2>Git</h2>
+        <p>Git is the distributed version control system. Git is responsible for keeping track of changes to content –
+          usually source code files.</p>
+        <h2>GitHub</h2>
+        <p>GitHub is a company that provides Git repository hosting. That means that they provide a turnkey solution to
+          host Git repositories on their servers. That can be useful to keep a backup of your repository (Git only
+          tracks
+          the changes made to you files over time, the repo still needs to be backed up), and to have a centralized
+          place
+          to keep and share your code with others.</p>
 
-      <h2>Add Your Name and Email</h2>
-      <p>Git includes the user name and email as part of the information in a commit. You’ll want to set this up under
-        your user-level configuration file with these commands:</p>
+        <p>More than just a Git repository hosting service, GitHub is a software forge. That means it also provides an
+          issue tracker, tools for code review, and other tools for collaborating with other people and creating
+          software.
+        </p>
 
-      <div class="codebox">
-        <code>
+        <p>GitHub isn’t the only one to provide this kind of service. One of its major competitors is GitLab.</p>
+      </section>
+
+      <section class="main-section" id="about_git">
+        <header>
+          <h1>About Git</h1>
+        </header>
+        <p>Git is an open source distributed version control system created in 2005 by Linus Torvalds and others from
+          the
+          Linux development community. Git can work with many types of projects, but it’s most commonly used for
+          software
+          source code.</p>
+
+        <p>Version control is a system that keeps track of changes to a file or group of files over time. When you have
+          a
+          history of these changes, it lets you find specific versions later, compare changes between versions, recover
+          files you may have deleted, or revert files to previous versions.</p>
+
+        <p>A <em>distributed</em> version control system means that different users maintain their own repositories of a
+          project, instead of working from one central repository. Users automatically have full file tracking abilities
+          and the project’s complete version history without needing access to a central server or network.</p>
+
+        <p>When Git is initialized in a project directory, it begins tracking file changes and stores them as “change
+          sets” or “patches.” Users working together on a project submit their change sets which are then included (or
+          rejected) in the project.
+        </p>
+      </section>
+
+      <section class="main-section" id="three_sections_of_a_git_project">
+        <header>
+          <h1>Three Sections of a Git Project</h1>
+        </header>
+        <p>A git project will have the following three main sections:</p>
+        <ol>
+          <li>Git directory</li>
+          <li>Working directory (or working tree)</li>
+          <li>Staging area</li>
+        </ol>
+        <p>The <strong>Git directory</strong> (located in <code>YOUR-PROJECT-PATH/.git/</code>) is where Git stores
+          everything it needs to
+          accurately track the project. This includes metadata and an object database which includes compressed versions
+          of the project files.</p>
+
+        <p>The <strong>working directory</strong> is where a user makes local changes to a project. The working
+          directory
+          pulls the
+          project’s files from the Git directory’s object database and places them on the user’s local machine.</p>
+
+        <p>The <strong>staging area</strong> is a file (also called the “index”, “stage”, or “cache”) that stores
+          information about what
+          will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a
+          snapshot
+          of the files as they are and permanently stores that snapshot in the Git directory.</p>
+
+        <p>With three sections, there are three main states that a file can be in at any given time: committed,
+          modified,
+          or staged. You modify a file any time you make changes to it in your working directory. Next, it’s staged when
+          you move it to the staging area. Finally, it’s <em>committed</em> after a commit.</p>
+      </section>
+
+      <section class="main-section" id="install_git">
+        <header>
+          <h1>Install Git</h1>
+        </header>
+        <ul>
+          <li>Ubuntu: <code>sudo apt-get install git</code></li>
+          <li>Windows: <a href="https://git-scm.com/download/win">Download</a></li>
+          <li>Mac: <a href="https://git-scm.com/download/mac">Download</a></li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="configure_the_git_environment">
+        <header>
+          <h1>Configure the Git Environment</h1>
+        </header>
+        <p>Git has a git config tool that allows you to customize your Git environment. You can change the way Git looks
+          and functions by setting certain configuration variables. Run these commands from a command line interface on
+          your machine (Terminal in Mac, Command Prompt or Powershell in Windows).</p>
+
+        <p>There are three levels of where these configuration variables are stored:</p>
+
+        <ol>
+          <li>System: located in /etc/gitconfig, applies default settings to every user of the computer. To make changes
+            to this file, use the --system option with the git config command.</li>
+          <li>User: located in ~/.gitconfig or ~/.config/git/config, applies settings to a single user. To make changes
+            to
+            this file, use the --global option with the git config command.</li>
+          <li>Project: located in YOUR-PROJECT-PATH/.git/config, applies settings to the project only. To make changes
+            to
+            this file, use the git config command.</li>
+        </ol>
+
+        <p>If there are settings that conflict with each other, the project-level configurations will override the
+          user-level ones, and the user-level configurations will override the system-level ones.</p>
+
+        <p>Note for Windows users: Git looks for the user-level configuration file (.gitconfig) in your $HOME directory
+          (C:\Users\$USER). Git also looks for /etc/gitconfig, although it’s relative to the MSys root, which is
+          wherever
+          you decide to install Git on your Windows system when you run the installer. If you are using version 2.x or
+          later of Git for Windows, there is also a system-level config file at C:\Documents and Settings\All
+          Users\Application Data\Git\config on Windows XP, and in C:\ProgramData\Git\config on Windows Vista and newer.
+          This config file can only be changed by git config -f FILE as an admin.</p>
+
+        <h2>Add Your Name and Email</h2>
+        <p>Git includes the user name and email as part of the information in a commit. You’ll want to set this up under
+          your user-level configuration file with these commands:</p>
+
+        <div class="codebox">
+          <code>
             <span class="code-red">git</span> config --global user.name <span class="code-green">"My Name"</span>
             <span class="code-red">git</span> config --global user.email <span class="code-green">"myemail@example.com"</span>
           </code>
-      </div>
-      <h2>Change Your Text Editor</h2>
-      <p>Git automatically uses your default text editor, but you can change this. Here’s an example to use the Atom
-        editor instead (the <code>--wait</code> option tells the shell to wait for the text editor so you can do your
-        work in it before the program moves on):</p>
+        </div>
+        <h2>Change Your Text Editor</h2>
+        <p>Git automatically uses your default text editor, but you can change this. Here’s an example to use the Atom
+          editor instead (the <code>--wait</code> option tells the shell to wait for the text editor so you can do your
+          work in it before the program moves on):</p>
 
-      <div class="codebox">
-        <code>
+        <div class="codebox">
+          <code>
             <span class="code-red">git</span> config --global core.editor <span class="code-green">"atom --wait"</span>
           </code>
-      </div>
+        </div>
 
-      <h2>Add Color to Git Output</h2>
-      <p>You can configure your shell to add color to Git output with this command:</p>
+        <h2>Add Color to Git Output</h2>
+        <p>You can configure your shell to add color to Git output with this command:</p>
 
-      <Div class="codebox">
-        <code>
+        <Div class="codebox">
+          <code>
             <span class="code-red">git</span> config --global color.ui <span class="code-red">true</span>
           </code>
-      </Div>
+        </Div>
 
-      <p>To see all your configuration settings, use the command <code>git config --list</code>.</p>
-    </section>
+        <p>To see all your configuration settings, use the command <code>git config --list</code>.</p>
+      </section>
 
-    <section class="main-section" id="initialize_git_in_a_project">
-      <header>
-        <h1>Initialize Git in a Project</h1>
-      </header>
-      <p>Once Git is installed and configured on your computer, you need to initialize it in your project to start using
-        its version control powers. In the command line, use the <code>cd</code> command to navigate to the top-level
-        (or root) folder for your project. Next, run the command <code>git init</code>. This installs a Git directory
-        folder with all the files and objects Git needs to track your project.</p>
+      <section class="main-section" id="initialize_git_in_a_project">
+        <header>
+          <h1>Initialize Git in a Project</h1>
+        </header>
+        <p>Once Git is installed and configured on your computer, you need to initialize it in your project to start
+          using
+          its version control powers. In the command line, use the <code>cd</code> command to navigate to the top-level
+          (or root) folder for your project. Next, run the command <code>git init</code>. This installs a Git directory
+          folder with all the files and objects Git needs to track your project.</p>
 
-      <p>It’s important that the Git directory is installed in the project root folder. Git can track files in
-        subfolders, but it won’t track files located in a parent folder relative to the Git directory.</p>
-    </section>
+        <p>It’s important that the Git directory is installed in the project root folder. Git can track files in
+          subfolders, but it won’t track files located in a parent folder relative to the Git directory.</p>
+      </section>
 
-    <section class="main-section" id="get_help_in_git">
-      <header>
-        <h1>Get Help in Git</h1>
-      </header>
-      <p>If you forget how any command works in Git, you can access Git help from the command line several ways:</p>
+      <section class="main-section" id="get_help_in_git">
+        <header>
+          <h1>Get Help in Git</h1>
+        </header>
+        <p>If you forget how any command works in Git, you can access Git help from the command line several ways:</p>
 
-      <div class="codebox">
-        <code><span class="code-red">git help</span> COMMAND <br>
+        <div class="codebox">
+          <code><span class="code-red">git help</span> COMMAND <br>
           <span class="code-red">git</span> COMMAND --help<br>
           <span class="code-red">man</span> git-COMMAND
         </code>
-      </div>
-      <p>This displays the manual page for the command in your shell window. To navigate, scroll with the up and down
-        arrow keys or use the following keyboard shortcuts:</p>
+        </div>
+        <p>This displays the manual page for the command in your shell window. To navigate, scroll with the up and down
+          arrow keys or use the following keyboard shortcuts:</p>
 
-      <ul>
-        <li><code>f</code> or <code>spacebar</code> to page forward</li>
-        <li><code>b</code>to page back</li>
-        <li><code>q</code>to quit</li>
-      </ul>
-    </section>
+        <ul>
+          <li><code>f</code> or <code>spacebar</code> to page forward</li>
+          <li><code>b</code>to page back</li>
+          <li><code>q</code>to quit</li>
+        </ul>
+      </section>
 
-    <section class="main-section" id="sources">
-      <header>
-        <h1>Sources</h1>
-      </header>
-      <p>This article uses information from the most amazing freeCodeCamp website.</p>
-      <ul>
-        <li><a
-            href="https://guide.freecodecamp.org/git/difference-git-github/">https://guide.freecodecamp.org/git/difference-git-github/</a>
-        </li>
-        <li><a href="https://guide.freecodecamp.org/git/">https://guide.freecodecamp.org/git/</a></li>
-      </ul>
-    </section>
+      <section class="main-section" id="sources">
+        <header>
+          <h1>Sources</h1>
+        </header>
+        <p>This article uses information from the most amazing freeCodeCamp website.</p>
+        <ul>
+          <li><a
+              href="https://guide.freecodecamp.org/git/difference-git-github/">https://guide.freecodecamp.org/git/difference-git-github/</a>
+          </li>
+          <li><a href="https://guide.freecodecamp.org/git/">https://guide.freecodecamp.org/git/</a></li>
+        </ul>
+      </section>
 
-  </main>
-</div id="footer-flex">
-  <footer id="footer">
-    <ul>
-      <li><strong>IanHDev</strong></li>
-      <li><a href="https://twitter.com/intent/tweet?screen_name=IanHDev&ref_src=twsrc%5Etfw"
-          class="twitter-mention-button" data-show-count="false">Tweet to @TwitterDev</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </li>
-      <li><a href="https://github.com/IanHDev" target="_blank">My GitHub</a></li>
-    </ul>
-  </footer>
+    </main>
 
+  </div>
 </body>
 
 </html>
